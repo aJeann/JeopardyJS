@@ -1,0 +1,73 @@
+[
+    {
+        "id": 0,
+        "name": "musik",
+        "q1": "Han heter Bieber i efternamn",
+        "a1": "Vad är Justin",
+        "q2": "Bandet har gjort låten SAIL",
+        "a2": "Vilka är AWOLNATION",
+        "q3": "Denna artist sjöng låten Free Fallin",
+        "a3": "Vem är John Mayer",
+        "q4": "Dessa två var med och sjöng i på spåret 2021",
+        "a4": "Vilka är First Aid Kit",
+        "q5": "Denna artist hade flest spelningar på spotify 2020",
+        "a5": "Vem är Bad bunny"
+    
+    },
+    {
+        "id": 1,
+        "name": "hundar",
+        "q1": "Hunden Mei är av denna ras",
+        "a1": "Vad är Shetland Sheepdog",
+        "q2": "Han heter Bieber i efternamn",
+        "a2": "Vad är Justin",
+        "q3": "Han heter Bieber i efternamn",
+        "a3": "Vad är Justin",
+        "q4": "Han heter Bieber i efternamn",
+        "a4": "Vad är Justin",
+        "q5": "Han heter Bieber i efternamn",
+        "a5": "Vad är Justin"
+    },
+    {
+        "id": 2,
+        "name": "hundar",
+        "q1": "Hunden Mei är av denna ras",
+        "a1": "Vad är Shetland Sheepdog",
+        "q2": "Han heter Bieber i efternamn",
+        "a2": "Vad är Justin",
+        "q3": "Han heter Bieber i efternamn",
+        "a3": "Vad är Justin",
+        "q4": "Han heter Bieber i efternamn",
+        "a4": "Vad är Justin",
+        "q5": "Han heter Bieber i efternamn",
+        "a5": "Vad är Justin"
+    },
+    {
+        "id": 3,
+        "name": "hundar",
+        "q1": "Hunden Mei är av denna ras",
+        "a1": "Vad är Shetland Sheepdog",
+        "q2": "Han heter Bieber i efternamn",
+        "a2": "Vad är Justin",
+        "q3": "Han heter Bieber i efternamn",
+        "a3": "Vad är Justin",
+        "q4": "Han heter Bieber i efternamn",
+        "a4": "Vad är Justin",
+        "q5": "Han heter Bieber i efternamn",
+        "a5": "Vad är Justin"
+    },
+    {
+        "id": 4,
+        "name": "hundar",
+        "q1": "Hunden Mei är av denna ras",
+        "a1": "Vad är Shetland Sheepdog",
+        "q2": "Han heter Bieber i efternamn",
+        "a2": "Vad är Justin",
+        "q3": "Han heter Bieber i efternamn",
+        "a3": "Vad är Justin",
+        "q4": "Han heter Bieber i efternamn",
+        "a4": "Vad är Justin",
+        "q5": "Han heter Bieber i efternamn",
+        "a5": "Vad är Justin"
+    }
+] 
