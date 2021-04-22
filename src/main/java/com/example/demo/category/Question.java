@@ -1,5 +1,10 @@
 package com.example.demo.category;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 /**
  * Created by Axel Jeansson
  * Date: 2021-04-22
@@ -7,7 +12,12 @@ package com.example.demo.category;
  * Project: Jeopardy
  * Copyright: MIT
  */
+
+@Entity
+@Table
 public class Question {
+    @Id
+    @GeneratedValue
     private long id;
     private String question;
     private int value;

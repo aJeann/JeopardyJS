@@ -1,5 +1,8 @@
 package com.example.demo.category;
 
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+
+import javax.persistence.*;
 import java.util.List;
 
 /**
@@ -9,9 +12,24 @@ import java.util.List;
  * Project: Jeopardy
  * Copyright: MIT
  */
+
+@Entity
+@Table
 public class Category {
+    @Id
+    @SequenceGenerator(
+            name = "category_sequence",
+            sequenceName = "category_sequence",
+            allocationSize = 1
+    )
+    @GeneratedValue(
+            strategy = GenerationType.SEQUENCE,
+            generator = "category_sequence"
+
+    )
     private long id;
     private String name;
+    @OneToMany
     private List<Question> listOfQuestions;
 
     public Category() {
