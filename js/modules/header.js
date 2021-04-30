@@ -1,4 +1,5 @@
 import UI from "../ui.js";
+import MainSection from "./mainsection.js";
 
 let numberOfProducts = JSON.parse(localStorage.getItem("numberInCart"));
 if (numberOfProducts == null)
@@ -50,11 +51,11 @@ export default class Header extends UI {
                   <button
                     type="button"
                     id="choose-game"
-                    class="btn btn-secondary btn-lg btn-block text-nowrap t-1 btn-space hover-shadow"
+                    class="choose-game btn btn-secondary btn-lg btn-block text-nowrap t-1 btn-space hover-shadow"
                     data-bs-toggle="modal"
                     data-bs-target="#choose-game"
                   >
-                    Välj match
+                    Ändra plan
                 </button>
               </li>
               <li class="nav-item mr-4">
@@ -74,6 +75,18 @@ export default class Header extends UI {
   </header>
   `;
         super.container.innerHTML = this.html;
+
+        localStorage.setItem("category", "./data/categories.JSON")
+
+        this.mainSection = new MainSection(".main-section");
+        this.mainSection.showCategories("./data/categories.JSON");
+        
+        super.container.addEventListener("click", async (e) => {
+          if (e.target.className == "choose-game btn btn-secondary btn-lg btn-block text-nowrap t-1 btn-space hover-shadow"){
+            localStorage.setItem("category", "./data/categories2.JSON")
+            await this.mainSection.showCategories("./data/categories2.JSON");
+          }
+      });
     }
 
 }

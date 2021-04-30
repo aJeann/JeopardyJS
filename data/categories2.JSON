@@ -1,0 +1,73 @@
+[
+    {
+        "id": 0,
+        "name": "Huvudstäder",
+        "q1": "Grekland",
+        "a1": "Vad är Aten",
+        "q2": "Österrike",
+        "a2": "Vad är Wien",
+        "q3": "Kanada",
+        "a3": "Vad är Ottawa",
+        "q4": "Indonesien",
+        "a4": "Jakarta",
+        "q5": "Brasilien",
+        "a5": "Brasilia"
+    
+    },
+    {
+        "id": 1,
+        "name": "Fotboll",
+        "q1": "Detta lag spelar på Camp Nou",
+        "a1": "Vad är FC Barcelona",
+        "q2": "Så många byten får göras under en halvlek",
+        "a2": "Vad är 10",
+        "q3": "Här spelade Eden Hazard innan Chelsea",
+        "a3": "Vad är Lille",
+        "q4": "Denna spelare kallades för Pippo",
+        "a4": "Vem är Filippo Inzaghi",
+        "q5": "Så många matcher spelar varje lag i Bundelisga varje år",
+        "a5": "Vad är 34"
+    },
+    {
+        "id": 2,
+        "name": "Spel",
+        "q1": "Så många pjäser finns det sammanlagt i schack",
+        "a1": "Vad är 32",
+        "q2": "Så många unika kort finns det i en kortlek",
+        "a2": "Vad är 52",
+        "q3": "I detta spel både vinner och förlorar man genom att fälla kungen",
+        "a3": "Vad är kubb",
+        "q4": "Detta är världens mest spelade kortspel",
+        "a4": "Vad är poker",
+        "q5": "Detta är det mest sålda datorspelet någonsin",
+        "a5": "Vad är minecraft"
+    },
+    {
+        "id": 3,
+        "name": "Matte",
+        "q1": "2x9",
+        "a1": "Vad är 18",
+        "q2": "2+2x10",
+        "a2": "Vad är 22",
+        "q3": "100/2+12-5",
+        "a3": "Vad är 57",
+        "q4": "3 * 3 * 3 * 10",
+        "a4": "Vad är 270",
+        "q5": "(10+12-5*3+2/7)*0",
+        "a5": "Vad är 0"
+    },
+    {
+        "id": 4,
+        "name": "Djur",
+        "q1": "Magnus",
+        "a1": "Vad är Uggla",
+        "q2": "Larry",
+        "a2": "Vad är Bird",
+        "q3": "Woods",
+        "a3": "Vad är Tiger",
+        "q4": "Borg",
+        "a4": "Vad är Björn",
+        "q5": "Rikard",
+        "a5": "Vad är Wolff"
+    }
+] 
