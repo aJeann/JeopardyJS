@@ -17,7 +17,7 @@ export default class PlayerSection extends UI {
                 <button type="button" class="p1-btn-neg btn btn-outline-danger btn-sm">-</button>
                 <button type="button" class="p1-btn-pos btn btn-outline-success btn-sm">+</button>
             </div>
-            </div>
+        </div>
 
             <div class="card bg-success text-center">
             <div class="card-body">
