@@ -1,0 +1,12 @@
+[
+    {
+        "id": 0,
+        "name": "Första",
+        "path": "data/categories.JSON"    
+    },
+    {
+        "id": 1,
+        "name": "Andra",
+        "path": "data/categories2.JSON"
+    }
+] 

@@ -1,6 +1,5 @@
 import Header from "./header.js";
 import Footer from "./footer.js";
-import MainSection from "./mainsection.js";
 import PlayerSection from "./playersection.js";
 import PlayerModal from "./playermodal.js";
 

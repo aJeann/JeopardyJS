@@ -1,5 +1,4 @@
 import UI from "../ui.js";
-import Header from "./header.js";
 
 export default class PlayerModal extends UI {
     constructor(appendTo) {

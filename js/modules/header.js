@@ -53,18 +53,19 @@ export default class Header extends UI {
                     id="choose-game"
                     class="choose-game btn btn-secondary btn-lg btn-block text-nowrap t-1 btn-space hover-shadow"
                     data-bs-toggle="modal"
-                    data-bs-target="#choose-game"
+                    data-bs-target="#choose-game-modal"
                   >
                     Ändra plan
                 </button>
               </li>
               <li class="nav-item mr-4">
-                  <a href="Cart.html">
                     <button
                       type="button"
-                      id="Cart-button"
+                      id="fj-button"
                       class="btn btn-secondary btn-lg btn-block text-nowrap t-1 btn-space hover-shadow"
-                    >Starta om
+                      data-bs-toggle="modal"
+                      data-bs-target="#final-jeopardy-modal"
+                    >Final Jeopardy!
                     </button></a
                   >
               </li>
@@ -81,12 +82,6 @@ export default class Header extends UI {
         this.mainSection = new MainSection(".main-section");
         this.mainSection.showCategories("./data/categories.JSON");
         
-        super.container.addEventListener("click", async (e) => {
-          if (e.target.className == "choose-game btn btn-secondary btn-lg btn-block text-nowrap t-1 btn-space hover-shadow"){
-            localStorage.setItem("category", "./data/categories2.JSON")
-            await this.mainSection.showCategories("./data/categories2.JSON");
-          }
-      });
     }
 
 }

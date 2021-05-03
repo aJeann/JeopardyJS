@@ -1,8 +1,21 @@
-.card{
-    height: 150px;
-    margin-bottom: 30px;
+.main-section .card{
+    height: 130px;
+    margin-bottom: 10px;
+}
+
+.player-section .card{
+    margin-bottom: 10px;
+}
+
+.player-section .btn{
+    background-color: white;
+    width: 15%;
 }
  
 .btn{
     font-size: 20px;
+}
+
+.modal{
+    width: 100;
 }

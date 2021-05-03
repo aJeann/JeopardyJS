@@ -69,5 +69,11 @@
         "a4": "Vad är Björn",
         "q5": "Rikard",
         "a5": "Vad är Wolff"
+    },
+    {
+        "id": 5,
+        "category": "Matematik",
+        "q1": "Denna formula används för att räkna ut arean på en cirkel",
+        "a1": "π*r²"
     }
 ] 

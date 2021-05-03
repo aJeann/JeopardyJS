@@ -69,5 +69,11 @@
         "a4": "Vad är Blackadder",
         "q5": "Denna skådespelare är bl.a känd från School of rock",
         "a5": "Vem är Jack Black"
+    },
+    {
+        "id": 5,
+        "category": "Geografi",
+        "q1": "Hur många länder finns det i Afrika",
+        "a1": "55"
     }
 ] 
