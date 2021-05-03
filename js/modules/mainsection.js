@@ -1,4 +1,5 @@
 import UI from "../ui.js";
+import Header from "./header.js";
 
 export default class MainSection extends UI {
     constructor(appendTo) {
@@ -15,6 +16,9 @@ export default class MainSection extends UI {
                 let path = e.target.dataset.categoryId;
                 console.log(path)
                 await this.showCategories(path);
+            }
+            if (e.target.className == "fj-button"){
+                this.header;
             }
             
         });

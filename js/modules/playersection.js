@@ -1,8 +1,11 @@
 import UI from "../ui.js";
+import Header from "./header.js";
 
 export default class PlayerSection extends UI {
     constructor(appendTo) {
         super(appendTo);
+        this.header = new Header("header");
+        this.header.loadHeader();
 
         let finalQ = JSON.parse(localStorage.getItem("finalQ"));
         let category = finalQ.category;
@@ -151,6 +154,9 @@ export default class PlayerSection extends UI {
                 document.getElementById("a-points").innerHTML = tempV;
                 localStorage.setItem("a-points", tempV);
             }
+        });
+        super.container.addEventListener("click", async(e) => {
+            await this.header.loadHeader();
         })
 
     

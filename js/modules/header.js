@@ -1,5 +1,4 @@
 import UI from "../ui.js";
-import MainSection from "./mainsection.js";
 
 let numberOfProducts = JSON.parse(localStorage.getItem("numberInCart"));
 if (numberOfProducts == null)
@@ -8,7 +7,11 @@ if (numberOfProducts == null)
 export default class Header extends UI {
     constructor(appendTo) {
         super(appendTo);
-        this.html = `
+        localStorage.setItem("category", "./data/categories.JSON")
+    }
+
+    async loadHeader(){
+      this.html = `
         <header>
     <div class="shadow p-3 mb-5 bg-white rounded">
       <nav class="navbar navbar-expand-lg navbar-light">
@@ -76,12 +79,5 @@ export default class Header extends UI {
   </header>
   `;
         super.container.innerHTML = this.html;
-
-        localStorage.setItem("category", "./data/categories.JSON")
-
-        this.mainSection = new MainSection(".main-section");
-        this.mainSection.showCategories("./data/categories.JSON");
-        
     }
-
 }
