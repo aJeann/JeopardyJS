@@ -39,39 +39,18 @@ export default class Header extends UI {
           
             <ul class="navbar-nav mr-auto mr-4 mt-lg-0">
               <li class="nav-item mr-4">
-              <a href="createNewGame.html">
+              <a href="index.html">
                   <button
                     type="button"
-                    id="add-player"
+                    id="back-to-start"
                     class="btn btn-secondary btn-lg btn-block text-nowrap t-1 btn-space hover-shadow"
                   >
-                  Skapa ny spelplan
+                  Tillbaka
                   </button>
                   </a>
               </li>
 
-              <li class="nav-item mr-4 p-6 mx-5">
-                  <button
-                    type="button"
-                    id="choose-game"
-                    class="choose-game btn btn-secondary btn-lg btn-block text-nowrap t-1 btn-space hover-shadow"
-                    data-bs-toggle="modal"
-                    data-bs-target="#choose-game-modal"
-                  >
-                    Ändra plan
-                </button>
-              </li>
-              <li class="nav-item mr-4">
-                    <button
-                      type="button"
-                      id="fj-button"
-                      class="btn btn-secondary btn-lg btn-block text-nowrap t-1 btn-space hover-shadow"
-                      data-bs-toggle="modal"
-                      data-bs-target="#final-jeopardy-modal"
-                    >Final Jeopardy!
-                    </button></a
-                  >
-              </li>
+            
             </ul>
           </div>
       </nav>
