@@ -10,14 +10,11 @@ export default class PlayerSection extends UI {
         <button class="remove-btn btn btn-outline-primary bg-light">Ta bort spelare</button>`
         super.container.innerHTML = this.hmtl;
 
-
-        this.header = new Header("header");
-        this.header.loadHeader();
-
         this.printPlayerSection();
+        this.printFinalJeopardy();
         
-        super.container.addEventListener("click", function(e){
-            
+        super.container.addEventListener("click", function(e){        
+            console.log(e)
             let value = Number(sessionStorage.getItem("valueOf"));
             let p0points = Number(localStorage.getItem("0-points"));
             let p1points = Number(localStorage.getItem("1-points"));
@@ -28,7 +25,6 @@ export default class PlayerSection extends UI {
             if(e.target.className == "p1-btn-neg btn btn-outline-danger btn-sm"){
                 let tempV = Number(document.getElementById("0-points").innerText);
                 tempV -= value;
-                console.log(tempV);
                 document.getElementById("0-points").innerHTML = tempV
                 localStorage.setItem("0-points", tempV);
             }
@@ -151,7 +147,7 @@ export default class PlayerSection extends UI {
             if(e.target.className == "show-a btn btn-light"){
                 showA();
             }
-            if(e.target.className == "add-btn btn btn-outline-primary"){
+            if(e.target.className == "add-btn btn btn-outline-primary bg-light"){
                 let newAmount = amount;
                 if(amount < 5){
                     newAmount = amount + 1;
@@ -159,7 +155,8 @@ export default class PlayerSection extends UI {
                 localStorage.setItem("amountOfPlayers", newAmount)
                 window.location.reload();
             }
-            if(e.target.className == "remove-btn btn btn-outline-primary"){
+            if(e.target.className == "remove-btn btn btn-outline-primary bg-light"){
+                console.log("test")
                 let newAmount = amount;
                 if(amount > 1){
                      newAmount = amount - 1;
@@ -168,9 +165,6 @@ export default class PlayerSection extends UI {
                 window.location.reload();
             }
         });
-        super.container.addEventListener("click", async(e) => {
-            await this.header.loadHeader();
-        })
 
         function showA(){
             var x = document.getElementById("answer");
@@ -181,15 +175,10 @@ export default class PlayerSection extends UI {
             }
         }
     
-
-    
     }
 
     printPlayerSection(){
         let amountOfPlayers = Number(localStorage.getItem("amountOfPlayers"));
-        let finalQ = sessionStorage.getItem("finalQ")
-        let category = sessionStorage.getItem("finalC");
-        let answer = sessionStorage.getItem("finalA")
         let output = ``
         let buttonArray = ['primary', 'danger', 'success', 'info', 'warning'];
 
@@ -200,13 +189,24 @@ export default class PlayerSection extends UI {
                 <div class="card-body">
                     <h5 class="card-title">Spelare ${i+1}</h5>
                     <hr>
-                    <p class="fs-1" id="${i}-points">0</p>
+                    <p class="fs-1" id="${i}-points"></p>
                     <button type="button" class="p${i+1}-btn-neg btn btn-outline-danger btn-sm">-</button>
                     <button type="button" class="p${i+1}-btn-pos btn btn-outline-success btn-sm">+</button>
                 </div>
             </div>`
         }
-        
+        super.container.innerHTML += output;
+
+        this.printFinalJeopardy();
+    }
+
+    printFinalJeopardy(){
+        let amountOfPlayers = Number(localStorage.getItem("amountOfPlayers"));
+        let finalQ = sessionStorage.getItem("finalQ");
+        let category = sessionStorage.getItem("finalC");
+        let answer = sessionStorage.getItem("finalA");
+        let buttonArray = ['primary', 'danger', 'success', 'info', 'warning'];
+        let output = ``;
         output += ` 
                     <div class="modal fade" id="final-jeopardy-modal" aria-hidden="true" aria-labelledby="..." tabindex="-1">
                         <div class="modal-dialog modal-lg modal-dialog-centered">
@@ -269,6 +269,9 @@ export default class PlayerSection extends UI {
                     </div>`
 
                 super.container.innerHTML += output;
+
+                this.header = new Header("header").loadHeader();
+
     }
 
     

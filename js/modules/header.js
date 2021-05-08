@@ -60,7 +60,7 @@ export default class Header extends UI {
                     <button
                       type="button"
                       id="fj-button"
-                      class="btn btn-secondary btn-lg btn-block text-nowrap t-1 btn-space hover-shadow"
+                      class="fj btn btn-secondary btn-lg btn-block text-nowrap t-1 btn-space hover-shadow"
                       data-bs-toggle="modal"
                       data-bs-target="#final-jeopardy-modal"
                     >Final Jeopardy!

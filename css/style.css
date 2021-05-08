@@ -24,3 +24,7 @@ body{
 .modal{
     width: 100;
 }
+
+.card-header{
+    background-color: hotpink;
+}

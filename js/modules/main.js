@@ -7,3 +7,13 @@ window.addEventListener("load", async (e) => {
     new PlayerSection(".player-section");
     new Footer("footer");
 });
+
+for(let i=0; i<5; i++){
+    if(!localStorage.getItem(i+"-points")){
+        localStorage.setItem(i+"-points", 0)
+    }
+}
+
+if(!localStorage.getItem("amountOfPlayers")){
+    localStorage.setItem("amountOfPlayers", 3);
+  }

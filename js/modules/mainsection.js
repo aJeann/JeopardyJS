@@ -22,9 +22,6 @@ export default class MainSection extends UI {
                 console.log(path)
                 await this.showCategories(path);
             }
-            if (e.target.className == "fj-button"){
-                this.header;
-            }
             
         });
         
@@ -33,10 +30,6 @@ export default class MainSection extends UI {
                 this.changeValue(e, localStorage.getItem("category"));
             }
         });
-
-        if(!localStorage.getItem("amountOfPlayers")){
-            localStorage.setItem("amountOfPlayers", 3);
-          }
 
     }
 
@@ -87,10 +80,13 @@ export default class MainSection extends UI {
                 <div class="modal fade" id="modal${buttonNumber}" aria-hidden="true" aria-labelledby="..." tabindex="-1">
                     <div class="modal-dialog modal-xl modal-dialog-centered">
                         <div class="modal-content">
-                            <div class="card border-${buttonArray[i]} h-100 rounded"> 
+                            <div class="card h-100 rounded"> 
+                                <div class="card-header text-center">
+                                <h3>100</h3>
+                                </div>
                                 <div class="card-body text-center">
                                 <br>
-                                ${doublePoints == buttonNumber ? `<p>Dagens dubbel!</p><input class="form-control" placeholder="Hur mycket vågar du satsa?"><button class="btn btn-light" id="show-q">Visa fråga</button><br><div id="question" style="display:none"><p>${GameArray[i].question1}</p></div>` : `<p id="show-answer">${GameArray[i].question1}</p>`}
+                                ${doublePoints == buttonNumber ? `<p>Dagens dubbel!</p><input class="form-control" type="number" placeholder="Hur mycket vågar du satsa?"><button class="btn btn-light" id="show-q">Visa fråga</button><br><div id="question" style="display:none"><h1>${GameArray[i].question1}</h1></div>` : `<h1>${GameArray[i].question1}</h1>`}
                                 <br>        
                                 <div id="answer${buttonNumber}" style="display:none"><p>${GameArray[i].answer1}</p></div>
                                 <button class="btn btn-light" id="show-a" data-clicked-button="${buttonNumber}">Visa svar</button>         
@@ -112,10 +108,13 @@ export default class MainSection extends UI {
                 <div class="modal fade" id="modal${buttonNumber}" aria-hidden="true" aria-labelledby="..." tabindex="-1">
                     <div class="modal-dialog modal-xl modal-dialog-centered">
                         <div class="modal-content">
-                            <div class="card border-${buttonArray[i]} h-100 rounded">
+                            <div class="card h-100 rounded">
+                            <div class="card-header text-center">
+                                <h3>200</h3>
+                                </div>
                                 <div class="card-body text-center">
                                 <br>
-                                ${doublePoints == buttonNumber ? `<p>Dagens dubbel!</p><input class="form-control" placeholder="Hur mycket vågar du satsa?"><button class="btn btn-light" id="show-q">Visa fråga</button><br><div id="question" style="display:none"><p>${GameArray[i].question2}</p></div>` : `<p>${GameArray[i].question2}</p>`}
+                                ${doublePoints == buttonNumber ? `<p>Dagens dubbel!</p><input class="form-control" type="number" placeholder="Hur mycket vågar du satsa?"><button class="btn btn-light" id="show-q">Visa fråga</button><br><div id="question" style="display:none"><h1>${GameArray[i].question2}</h1></div>` : `<h1>${GameArray[i].question2}</h1>`}
                                 <br> 
                                 <div id="answer${buttonNumber}" style="display:none"><p>${GameArray[i].answer2}</p></div>
                                 <button class="btn btn-light" id="show-a" data-clicked-button="${buttonNumber}">Visa svar</button>     
@@ -139,10 +138,13 @@ export default class MainSection extends UI {
                 <div class="modal fade" id="modal${buttonNumber}" aria-hidden="true" aria-labelledby="..." tabindex="-1">
                     <div class="modal-dialog modal-xl modal-dialog-centered">
                         <div class="modal-content">
-                            <div class="card border-${buttonArray[i]} h-100 rounded">
+                            <div class="card h-100 rounded">
+                            <div class="card-header text-center">
+                                <h3>300</h3>
+                                </div>
                                 <div class="card-body text-center">
                                 <br>
-                                ${doublePoints == buttonNumber ? `<p>Dagens dubbel!</p><input class="form-control" placeholder="Hur mycket vågar du satsa?"><button class="btn btn-light" id="show-q">Visa fråga</button><br><div id="question" style="display:none"><p>${GameArray[i].question3}</p></div>` : `<p>${GameArray[i].question3}</p>`}
+                                ${doublePoints == buttonNumber ? `<p>Dagens dubbel!</p><input class="form-control" type="number" placeholder="Hur mycket vågar du satsa?"><button class="btn btn-light" id="show-q">Visa fråga</button><br><div id="question" style="display:none"><h1>${GameArray[i].question3}</h1></div>` : `<h1>${GameArray[i].question3}</h1>`}
                                 <br>  
                                 <div id="answer${buttonNumber}" style="display:none"><p>${GameArray[i].answer3}</p></div>
                                 <button class="btn btn-light" id="show-a" data-clicked-button="${buttonNumber}">Visa svar</button>     
@@ -165,10 +167,13 @@ export default class MainSection extends UI {
                 <div class="modal fade" id="modal${buttonNumber}" aria-hidden="true" aria-labelledby="..." tabindex="-1">
                     <div class="modal-dialog modal-xl modal-dialog-centered">
                         <div class="modal-content">
-                            <div class="card border-${buttonArray[i]} h-100 rounded">
+                            <div class="card h-100 rounded">
+                                <div class="card-header text-center">
+                                <h3>400</h3>
+                                </div>
                                 <div class="card-body text-center">
                                 <br>
-                                ${doublePoints == buttonNumber ? `<p>Dagens dubbel!</p><input class="form-control" placeholder="Hur mycket vågar du satsa?"><button class="btn btn-light" id="show-q">Visa fråga</button><br><div id="question" style="display:none"><p>${GameArray[i].question4}</p></div>` : `<p>${GameArray[i].question4}</p>`}
+                                ${doublePoints == buttonNumber ? `<p>Dagens dubbel!</p><input class="form-control" type="number" placeholder="Hur mycket vågar du satsa?"><button class="btn btn-light" id="show-q">Visa fråga</button><br><div id="question" style="display:none"><h1>${GameArray[i].question4}</h1></div>` : `<h1>${GameArray[i].question4}</h1>`}
                                 <br>
                                 <div id="answer${buttonNumber}" style="display:none"><p>${GameArray[i].answer4}</p></div>
                                 <button class="btn btn-light" id="show-a" data-clicked-button="${buttonNumber}">Visa svar</button>     
@@ -191,10 +196,13 @@ export default class MainSection extends UI {
                 <div class="modal fade" id="modal${buttonNumber}" aria-hidden="true" aria-labelledby="..." tabindex="-1">
                     <div class="modal-dialog modal-xl modal-dialog-centered">
                         <div class="modal-content">
-                            <div class="card border-${buttonArray[i]} h-100 rounded">
+                            <div class="card h-100 rounded">
+                                <div class="card-header text-center">
+                                <h3>500</h3>
+                                </div>
                                 <div class="card-body text-center">
                                 <br>
-                                ${doublePoints == buttonNumber ? `<p>Dagens dubbel!</p><input class="form-control" placeholder="Hur mycket vågar du satsa?"><button class="btn btn-light" id="show-q">Visa fråga</button><br><div id="question" style="display:none"><p>${GameArray[i].question5}</p></div>` : `<p>${GameArray[i].question5}</p>`}
+                                ${doublePoints == buttonNumber ? `<p>Dagens dubbel!</p><input class="form-control" type="number" placeholder="Hur mycket vågar du satsa?"><button class="btn btn-light" id="show-q">Visa fråga</button><br><div id="question" style="display:none"><h1>${GameArray[i].question5}</h1></div>` : `<h1>${GameArray[i].question5}</h1>`}
                                 <br>
                                 <div id="answer${buttonNumber}" style="display:none"><p>${GameArray[i].answer5}</p></div>
                                 <button class="btn btn-light" id="show-a" data-clicked-button="${buttonNumber}">Visa svar</button>     

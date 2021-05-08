@@ -7,10 +7,9 @@ if (numberOfProducts == null)
 export default class Header extends UI {
     constructor(appendTo) {
         super(appendTo);
-        localStorage.setItem("category", "./data/categories.JSON")
     }
 
-    async loadHeader(){
+    loadHeader(){
       this.html = `
         <header>
     <div class="shadow p-3 mb-5 bg-white rounded">

@@ -14,7 +14,7 @@ export default class CreateGame extends UI {
     
     <div class="container mb-5">
     <p>Instruktioner: <br>
-    -Kontakta Axel när du vill skapa ett nytt spel!!! 
+    -Kontakta Axel när du vill skapa ett nytt spel!!!<br>
     -Varje spel har fem kategorier. Det vill säga för varje spel du skapar så måste du skicka fem separata kategorier med samma Spelnamn.<br>
     -Varje gång du vill skicka en ny kategori som ska tillhöra ett specifikt spel så måste du använda exakt samma Spelnamn.<br>
     -Fyll i frågor i "Fråga 1, 2 etc"<br>
