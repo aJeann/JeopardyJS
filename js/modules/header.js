@@ -1,13 +1,8 @@
 import UI from "../ui.js";
 
-let numberOfProducts = JSON.parse(localStorage.getItem("numberInCart"));
-if (numberOfProducts == null)
-    numberOfProducts = "";
-
 export default class Header extends UI {
     constructor(appendTo) {
         super(appendTo);
-        localStorage.setItem("category", "./data/categories.JSON")
     }
 
     async loadHeader(){

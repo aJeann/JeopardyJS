@@ -7,8 +7,9 @@ export default class PlayerSection extends UI {
         this.header = new Header("header");
         this.header.loadHeader();
 
-        let finalQ = JSON.parse(localStorage.getItem("finalQ"));
-        let category = finalQ.category;
+        let finalQ = "Om en triangel har två hörn som är 4° respektive 44°, vad är vinkeln på det tredje och sista hörnet?";
+        let category = "Geometri";
+        let answer = "Vad är 132°"
         
         this.html = `
         <h3>Spelare:</h3>
@@ -101,9 +102,11 @@ export default class PlayerSection extends UI {
                                 <div class="card-body text-center">
                                 <hr>
                                 <br>
-                                <p class="fs-1">${finalQ.q1}</p>            
+                                <p class="fs-1">${finalQ}</p>            
                                 <br>            
                                 <hr>
+                                <div id="answer" style="display:none"><h2>${answer}</h2></div>
+                                <button class="show-a btn btn-light" id="show-a">Visa svar</button>
                                 </div>
                                 <embed src="jeptheme.mp3" loop="true" autostart="true">
                             </div>
@@ -154,13 +157,27 @@ export default class PlayerSection extends UI {
                 document.getElementById("a-points").innerHTML = tempV;
                 localStorage.setItem("a-points", tempV);
             }
+            if(e.target.className == "show-a btn btn-light"){
+                showA();
+            }
         });
         super.container.addEventListener("click", async(e) => {
             await this.header.loadHeader();
         })
 
+        function showA(){
+            var x = document.getElementById("answer");
+            if (x.style.display === "none") {
+              x.style.display = "block";
+            } else {
+              x.style.display = "none";
+            }
+        }
+    
+
     
     }
 
+    
 
 }

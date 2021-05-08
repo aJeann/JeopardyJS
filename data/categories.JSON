@@ -1,79 +1,22 @@
 [
     {
-        "id": 0,
-        "name": "Musik",
-        "q1": "Han heter Bieber i efternamn",
-        "a1": "Vad är Justin",
-        "q2": "Denna artist har vunnit melodifestivalen flest gånger",
-        "a2": "Vem är Carola",
-        "q3": "Denna artist sjöng låten Free Fallin",
-        "a3": "Vem är John Mayer",
-        "q4": "Detta band var med och sjöng i på spåret 2021",
-        "a4": "Vilka är First Aid Kit",
-        "q5": "Denna låt har legat längst på svensktoppen",
-        "a5": "Vilken är 'Du är min man'"
-    
-    },
-    {
-        "id": 1,
-        "name": "Hundar",
-        "q1": "Hunden Mei är av denna ras",
-        "a1": "Vad är Shetland Sheepdog",
-        "q2": "Detta var den mest populära hundrasen 2020",
-        "a2": "Vad är Labrador",
-        "q3": "Så många registrerade hundar finns det i Sverige",
-        "a3": "Vad 1,001,000 (1 - 1,1)",
-        "q4": "Denna ras springer snabbare än någon annan",
-        "a4": "Vad är Greyhound",
-        "q5": "Denna ras har högst förväntad livslängd",
-        "a5": "Vad är chihuahua"
-    },
-    {
-        "id": 2,
-        "name": "Prinsar",
-        "q1": "Denna prins gjorde låten purple rain",
-        "a1": "Vem är Prince",
-        "q2": "Denna prins är gift med Meghan Markle",
-        "a2": "Vem är prins Harry",
-        "q3": "Denna prins är känd från disneys Aladdin",
-        "a3": "Vem är prins Ali",
-        "q4": "Denna prins är Sveriges yngsta",
-        "a4": "Vem är prins Gabriel",
-        "q5": "Denna prins är starkt förknippad med julen",
-        "a5": "Vad är prinskorv"
-    },
-    {
-        "id": 3,
-        "name": "Universitet",
-        "q1": "Detta universitet har förkortningen LIU",
-        "a1": "Vad är Linköping",
-        "q2": "Detta är Sveriges största universitet",
-        "a2": "Vilket är Stockholms",
-        "q3": "Detta uni är Sveriges nordligaste",
-        "a3": "Vilket är Luleå",
-        "q4": "Detta land har världens äldsta universitet",
-        "a4": "Vad är Marocko",
-        "q5": "Detta universitetslag har sloganen 'Roll tide'",
-        "a5": "Vilket är Alabama"
-    },
-    {
-        "id": 4,
-        "name": "Svart",
-        "q1": "Denna spindel är en av världens giftigaste",
-        "a1": "Vad är Svarta änkan",
-        "q2": "Detta ord används för att beskriva medvetslöshet",
-        "a2": "Vad är blackout",
-        "q3": "Denna panter gjorde succe 2018",
-        "a3": "Vad är Black panther",
-        "q4": "Denna karaktär spelades av Rowan Atkinson",
-        "a4": "Vad är Blackadder",
-        "q5": "Denna skådespelare är bl.a känd från School of rock",
-        "a5": "Vem är Jack Black"
-    },
-    {
-        "id": 5,
-        "category": "Geografi",
-        "q1": "Hur många länder finns det i Afrika",
-        "a1": "55"
+        "answer1": "Vem är Lampard?",
+        "answer2":"Vem är Mourinho?",
+        "answer3": "Vem är Terry?",
+        "answer4": "Vem är Drogba?",
+        "answer5": "Vad är Bridge?",
+        "finalA": "Vad är nej lol",
+        "finalQ": "Kommer Chelsea vinna CL?",
+        "id": 23,
+        "name": "Chelsea",
+        "question1": "Frank",
+        "question2": "Jose",
+        "question3": "John",
+        "question4": "Didier",
+        "question5": "Stamford",
+        "game":{
+            "id":"15",
+            "name":"Oscar"
+        }
     }
-] 
+]    
