@@ -54,7 +54,10 @@ export default class MainSection extends UI {
         for(let i = 0; i<CategoriesArray.length; i++){
             if(CategoriesArray[i].game.id == category){
                 GameArray.push(CategoriesArray[i]);
-            }
+                sessionStorage.setItem("finalQ", CategoriesArray[i].finalQ)
+                sessionStorage.setItem("finalA", CategoriesArray[i].finalA)
+                sessionStorage.setItem("finalC", CategoriesArray[i].finalC)
+               }
         }
 
         console.log(GameArray)

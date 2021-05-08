@@ -6,8 +6,8 @@ export default class PlayerSection extends UI {
         super(appendTo);
 
         this.hmtl = `
-        <button class="add-btn btn btn-outline-primary">Lägg till spelare</button>
-        <button class="remove-btn btn btn-outline-primary">Ta bort spelare</button>`
+        <button class="add-btn btn btn-outline-primary bg-light">Lägg till spelare</button>
+        <button class="remove-btn btn btn-outline-primary bg-light">Ta bort spelare</button>`
         super.container.innerHTML = this.hmtl;
 
 
@@ -187,9 +187,9 @@ export default class PlayerSection extends UI {
 
     printPlayerSection(){
         let amountOfPlayers = Number(localStorage.getItem("amountOfPlayers"));
-        let finalQ = "Om en triangel har två hörn som är 4° respektive 44°, vad är vinkeln på det tredje och sista hörnet?";
-        let category = "Geometri";
-        let answer = "Vad är 132°"
+        let finalQ = sessionStorage.getItem("finalQ")
+        let category = sessionStorage.getItem("finalC");
+        let answer = sessionStorage.getItem("finalA")
         let output = ``
         let buttonArray = ['primary', 'danger', 'success', 'info', 'warning'];
 
@@ -207,28 +207,6 @@ export default class PlayerSection extends UI {
             </div>`
         }
         
-
-                /*<div class="card bg-success text-center">
-                    <div class="card-body">
-                    <h5 class="card-title">Spelare 2</h5>
-                        <hr>
-                        <p class="fs-1" id="p-points">0</p>
-                        <button type="button" class="p2-btn-neg btn btn-outline-danger btn-sm">-</button>
-                        <button type="button" class="p2-btn-pos btn btn-outline-success btn-sm">+</button>
-                    </div>
-                </div>
-
-                <div class="ake-card card bg-info text-center">
-                    <div class="card-body">
-                        <h5 class="card-title">Spelare 3</h5>
-                        <hr>
-                        <p class="fs-1" id="a-points">0</p>
-                        
-                        <button type="button" class="p3-btn-neg btn btn-outline-danger btn-sm">-</button>
-                        <button type="button" class="p3-btn-pos btn btn-outline-success btn-sm">+</button>
-                        
-                    </div>
-                </div>*/
         output += ` 
                     <div class="modal fade" id="final-jeopardy-modal" aria-hidden="true" aria-labelledby="..." tabindex="-1">
                         <div class="modal-dialog modal-lg modal-dialog-centered">
@@ -254,40 +232,7 @@ export default class PlayerSection extends UI {
                                             </div>
                                         </div>
                                         </div>`
-                                    }/*
-
-                                    <div class="col-4">
-                                        <div class="card bg-success text-center">
-                                            <div class="card-body">
-                                            <h5 class="card-title">Spelare 2</h5>
-                                                <hr>
-                                                <p class="fs-2" id="p2-points">${localStorage.getItem("p-points")}</p>    
-                                                <div class="row">
-                                                <div class="col-3"><button type="button" class="p2-btn-nega btn btn-outline-danger">-</button></div>                                            
-                                                <div class="col-6"><input type="number" class="form-control" id="p2bet" placeholder="0"></div>
-                                                <div class="col-3"><button type="button" class="p2-btn-poss btn btn-outline-success">+</button></div>
-                                                </div>
-                                                            
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="col-4">
-                                        <div class="ake-card card bg-info text-center">
-                                            <div class="card-body">
-                                                <h5 class="card-title">Spelare 3</h5>
-                                                <hr>
-                                                <p class="fs-2" id="p3-points">${localStorage.getItem("a-points")}</p> 
-                                                <div class="row">
-                                                <div class="col-3"><button type="button" class="p3-btn-nega btn btn-outline-danger">-</button></div>                                            
-                                                <div class="col-6"><input type="number" class="form-control" id="p3bet" placeholder="0"></div>
-                                                <div class="col-3"><button type="button" class="p3-btn-poss btn btn-outline-success">+</button></div>
-                                                </div>
-                                                
-                                                
-                                            </div>
-                                        </div>
-                                    </div>*/
+                                    }
                                     output +=`
                                     </div>
 

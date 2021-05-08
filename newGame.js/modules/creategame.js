@@ -11,7 +11,17 @@ export default class CreateGame extends UI {
     let output = ``;
 
     output += `
+    
     <div class="container mb-5">
+    <p>Instruktioner: <br>
+    -Kontakta Axel när du vill skapa ett nytt spel!!! 
+    -Varje spel har fem kategorier. Det vill säga för varje spel du skapar så måste du skicka fem separata kategorier med samma Spelnamn.<br>
+    -Varje gång du vill skicka en ny kategori som ska tillhöra ett specifikt spel så måste du använda exakt samma Spelnamn.<br>
+    -Fyll i frågor i "Fråga 1, 2 etc"<br>
+    -Fyll i svar för respektive frågor i "Svar 1, 2 etc"<br>
+    -Varje spel har en "final jeopardy"-fråga. Denna behöver du bara fylla i när du skickar SISTA kategorin<br>
+    -Så fyll i SAMMA spelnamn varje gång(upp till fem kategorier), fyll i namnet på den kategori du skapar, fyll i frågor och svar för den kategorin och tryck sedan på "Skicka kategori"
+    </p>
     <form id="myForm" type="post">
     <div class="form-group">
       <label for="title">Spelnamn</label>
