@@ -11,9 +11,10 @@ body{
     margin-bottom: 10px;
 }
 
-.player-section .btn{
+.player-section .card .btn{
     background-color: white;
-    width: 15%;
+    width: 20%;
+    text-align: center;
 }
  
 .btn{

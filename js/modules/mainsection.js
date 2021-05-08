@@ -34,6 +34,10 @@ export default class MainSection extends UI {
             }
         });
 
+        if(!localStorage.getItem("amountOfPlayers")){
+            localStorage.setItem("amountOfPlayers", 3);
+          }
+
     }
 
     async showCategories(category){
@@ -72,13 +76,15 @@ export default class MainSection extends UI {
                 <h4>${GameArray[i].name}<h4>
                 <div class="card w-80 rounded">
                     <div class="card-body text-center">
-                        <button class="btn btn-${buttonArray[i]} w-100 h-100" data-question-value="${GameArray[i].question1}" id="${buttonNumber}" data-bs-toggle="modal" data-bs-target="#modal${buttonNumber}">100</button>
+                        <button class="btn btn-${buttonArray[i]} w-100 h-100"
+                         data-question-value="${GameArray[i].question1}"
+                          id="${buttonNumber}" data-bs-toggle="modal" data-bs-target="#modal${buttonNumber}">100</button>
                     </div>
                 </div>
                 <div class="modal fade" id="modal${buttonNumber}" aria-hidden="true" aria-labelledby="..." tabindex="-1">
                     <div class="modal-dialog modal-xl modal-dialog-centered">
                         <div class="modal-content">
-                            <div class="card bg-${buttonArray[i]} h-100 rounded"> 
+                            <div class="card border-${buttonArray[i]} h-100 rounded"> 
                                 <div class="card-body text-center">
                                 <br>
                                 ${doublePoints == buttonNumber ? `<p>Dagens dubbel!</p><input class="form-control" placeholder="Hur mycket vågar du satsa?"><button class="btn btn-light" id="show-q">Visa fråga</button><br><div id="question" style="display:none"><p>${GameArray[i].question1}</p></div>` : `<p id="show-answer">${GameArray[i].question1}</p>`}
@@ -95,13 +101,15 @@ export default class MainSection extends UI {
             `
             <div class="card w-80 rounded">
                     <div class="card-body text-center">
-                        <button class="btn btn-${buttonArray[i]} w-100 h-100" data-question-value="${GameArray[i].question2}" id="${buttonNumber}" data-bs-toggle="modal" href="#modal${buttonNumber}">200</button>
+                        <button class="btn btn-${buttonArray[i]} w-100 h-100"
+                        data-question-value="${GameArray[i].question2}"
+                        id="${buttonNumber}" data-bs-toggle="modal" href="#modal${buttonNumber}">200</button>
                     </div>
                 </div>
                 <div class="modal fade" id="modal${buttonNumber}" aria-hidden="true" aria-labelledby="..." tabindex="-1">
                     <div class="modal-dialog modal-xl modal-dialog-centered">
                         <div class="modal-content">
-                            <div class="card bg-${buttonArray[i]} h-100 rounded">
+                            <div class="card border-${buttonArray[i]} h-100 rounded">
                                 <div class="card-body text-center">
                                 <br>
                                 ${doublePoints == buttonNumber ? `<p>Dagens dubbel!</p><input class="form-control" placeholder="Hur mycket vågar du satsa?"><button class="btn btn-light" id="show-q">Visa fråga</button><br><div id="question" style="display:none"><p>${GameArray[i].question2}</p></div>` : `<p>${GameArray[i].question2}</p>`}
@@ -120,13 +128,15 @@ export default class MainSection extends UI {
             `
                 <div class="card w-80 rounded">
                     <div class="card-body text-center">
-                        <button class="btn btn-${buttonArray[i]} w-100 h-100" data-question-value="${GameArray[i].question3}" id="${buttonNumber}" data-bs-toggle="modal" href="#modal${buttonNumber}">300</button>
+                        <button class="btn btn-${buttonArray[i]} w-100 h-100"
+                         data-question-value="${GameArray[i].question3}"
+                          id="${buttonNumber}" data-bs-toggle="modal" href="#modal${buttonNumber}">300</button>
                     </div>
                 </div>
                 <div class="modal fade" id="modal${buttonNumber}" aria-hidden="true" aria-labelledby="..." tabindex="-1">
                     <div class="modal-dialog modal-xl modal-dialog-centered">
                         <div class="modal-content">
-                            <div class="card bg-${buttonArray[i]} h-100 rounded">
+                            <div class="card border-${buttonArray[i]} h-100 rounded">
                                 <div class="card-body text-center">
                                 <br>
                                 ${doublePoints == buttonNumber ? `<p>Dagens dubbel!</p><input class="form-control" placeholder="Hur mycket vågar du satsa?"><button class="btn btn-light" id="show-q">Visa fråga</button><br><div id="question" style="display:none"><p>${GameArray[i].question3}</p></div>` : `<p>${GameArray[i].question3}</p>`}
@@ -144,13 +154,15 @@ export default class MainSection extends UI {
                 `
                 <div class="card w-80 rounded">
                     <div class="card-body text-center">
-                        <button class="btn btn-${buttonArray[i]} w-100 h-100" data-question-value="${GameArray[i].question4}" id="${buttonNumber}" data-bs-toggle="modal" href="#modal${buttonNumber}">400</button>
+                        <button class="btn btn-${buttonArray[i]} w-100 h-100"
+                         data-question-value="${GameArray[i].question4}"
+                          id="${buttonNumber}" data-bs-toggle="modal" href="#modal${buttonNumber}">400</button>
                     </div>
                 </div>
                 <div class="modal fade" id="modal${buttonNumber}" aria-hidden="true" aria-labelledby="..." tabindex="-1">
                     <div class="modal-dialog modal-xl modal-dialog-centered">
                         <div class="modal-content">
-                            <div class="card bg-${buttonArray[i]} h-100 rounded">
+                            <div class="card border-${buttonArray[i]} h-100 rounded">
                                 <div class="card-body text-center">
                                 <br>
                                 ${doublePoints == buttonNumber ? `<p>Dagens dubbel!</p><input class="form-control" placeholder="Hur mycket vågar du satsa?"><button class="btn btn-light" id="show-q">Visa fråga</button><br><div id="question" style="display:none"><p>${GameArray[i].question4}</p></div>` : `<p>${GameArray[i].question4}</p>`}
@@ -168,13 +180,15 @@ export default class MainSection extends UI {
                 `
                 <div class="card w-80 rounded">
                     <div class="card-body text-center">
-                        <button class="btn btn-${buttonArray[i]} w-100 h-100" data-question-value="${GameArray[i].question5}" id="${buttonNumber}" data-bs-toggle="modal" href="#modal${buttonNumber}">500</button>
+                        <button class="btn btn-${buttonArray[i]} w-100 h-100"
+                         data-question-value="${GameArray[i].question5}"
+                          id="${buttonNumber}" data-bs-toggle="modal" href="#modal${buttonNumber}">500</button>
                     </div>
                 </div>
                 <div class="modal fade" id="modal${buttonNumber}" aria-hidden="true" aria-labelledby="..." tabindex="-1">
                     <div class="modal-dialog modal-xl modal-dialog-centered">
                         <div class="modal-content">
-                            <div class="card bg-${buttonArray[i]} h-100 rounded">
+                            <div class="card border-${buttonArray[i]} h-100 rounded">
                                 <div class="card-body text-center">
                                 <br>
                                 ${doublePoints == buttonNumber ? `<p>Dagens dubbel!</p><input class="form-control" placeholder="Hur mycket vågar du satsa?"><button class="btn btn-light" id="show-q">Visa fråga</button><br><div id="question" style="display:none"><p>${GameArray[i].question5}</p></div>` : `<p>${GameArray[i].question5}</p>`}
