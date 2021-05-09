@@ -37,8 +37,7 @@ export default class MainSection extends UI {
         let CategoriesArray = await super.loadData("GET", "https://jeopardy-oscar.herokuapp.com/allCats");
         CategoriesArray = JSON.parse(CategoriesArray);
         
-        console.log(CategoriesArray);
-        console.log(category)
+
         let buttonArray = ['primary', 'danger', 'success', 'info', 'secondary'];
         let buttonNumber = 0;
 

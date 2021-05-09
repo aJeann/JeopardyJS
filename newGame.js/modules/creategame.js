@@ -78,6 +78,10 @@ export default class CreateGame extends UI {
     </div>
     <br>
     <div class="form-group">
+      <label for="finalC">Final Jeopardy Kategori</label>
+      <input type="text" class="form-control" id="finalC" placeholder="Final jeopardy category">
+    </div>
+    <div class="form-group">
       <label for="finalQ">Final Jeopardy Fråga</label>
       <input type="text" class="form-control" id="finalQ" placeholder="Final jeopardy">
     </div>
@@ -134,6 +138,7 @@ export default class CreateGame extends UI {
         let a4 = document.getElementById("answer4").value;
         let q5 = document.getElementById("question5").value;
         let a5 = document.getElementById("answer5").value;
+        let finalc = document.getElementById("finalC").value;
         let finalq = document.getElementById("finalQ").value;
         let finala = document.getElementById("finalA").value;
 
@@ -181,7 +186,7 @@ export default class CreateGame extends UI {
         newNumber = 1;
         }
         console.log(newNumber);
-              let jsonData2 = {'game_id': newNumber, 'cat_id': catID+1, 'name': cateName, 'q1': q1, 'a1': a1, 'q2': q2, 'a2': a2, 'q3': q3, 'a3': a3, 'q4': q4, 'a4': a4, 'q5': q5, 'a5': a5, 'finalA': finala, 'finalQ': finalq};
+              let jsonData2 = {'game_id': newNumber, 'cat_id': catID+1, 'name': cateName, 'q1': q1, 'a1': a1, 'q2': q2, 'a2': a2, 'q3': q3, 'a3': a3, 'q4': q4, 'a4': a4, 'q5': q5, 'a5': a5, 'finalC': finalc, 'finalA': finala, 'finalQ': finalq};
               console.log(jsonData2)
               $.ajax(
                   {
