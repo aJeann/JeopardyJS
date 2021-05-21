@@ -274,7 +274,7 @@ export default class MainSection extends UI {
             }
         }
 
-        if(e.target.innerText == "100" || e.target.innerText == "200" ||e.target.innerText == "300" || e.target.innerText == "400" || e.target.innerText == "500")
+        if(e.target.innerText == "200" || e.target.innerText == "400" ||e.target.innerText == "600" || e.target.innerText == "800" || e.target.innerText == "1000")
         sessionStorage.setItem("valueOf", e.target.innerText);
 
 
