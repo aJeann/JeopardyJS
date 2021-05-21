@@ -14,7 +14,6 @@ export default class PlayerSection extends UI {
         this.printFinalJeopardy();
         
         super.container.addEventListener("click", function(e){        
-            this.printFinalJeopardy();
             console.log(e)
             let value = Number(sessionStorage.getItem("valueOf"));
             let p0points = Number(localStorage.getItem("0-points"));
