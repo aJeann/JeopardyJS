@@ -73,7 +73,7 @@ export default class MainSection extends UI {
                     <div class="card-body text-center">
                         <button class="btn btn-${buttonArray[i]} w-100 h-100"
                          data-question-value="${GameArray[i].question1}"
-                          id="${buttonNumber}" data-bs-toggle="modal" data-bs-target="#modal${buttonNumber}">100</button>
+                          id="${buttonNumber}" data-bs-toggle="modal" data-bs-target="#modal${buttonNumber}">200</button>
                     </div>
                 </div>
                 <div class="modal fade" id="modal${buttonNumber}" aria-hidden="true" aria-labelledby="..." tabindex="-1">
@@ -101,7 +101,7 @@ export default class MainSection extends UI {
                     <div class="card-body text-center">
                         <button class="btn btn-${buttonArray[i]} w-100 h-100"
                         data-question-value="${GameArray[i].question2}"
-                        id="${buttonNumber}" data-bs-toggle="modal" href="#modal${buttonNumber}">200</button>
+                        id="${buttonNumber}" data-bs-toggle="modal" href="#modal${buttonNumber}">400</button>
                     </div>
                 </div>
                 <div class="modal fade" id="modal${buttonNumber}" aria-hidden="true" aria-labelledby="..." tabindex="-1">
@@ -131,7 +131,7 @@ export default class MainSection extends UI {
                     <div class="card-body text-center">
                         <button class="btn btn-${buttonArray[i]} w-100 h-100"
                          data-question-value="${GameArray[i].question3}"
-                          id="${buttonNumber}" data-bs-toggle="modal" href="#modal${buttonNumber}">300</button>
+                          id="${buttonNumber}" data-bs-toggle="modal" href="#modal${buttonNumber}">600</button>
                     </div>
                 </div>
                 <div class="modal fade" id="modal${buttonNumber}" aria-hidden="true" aria-labelledby="..." tabindex="-1">
@@ -160,7 +160,7 @@ export default class MainSection extends UI {
                     <div class="card-body text-center">
                         <button class="btn btn-${buttonArray[i]} w-100 h-100"
                          data-question-value="${GameArray[i].question4}"
-                          id="${buttonNumber}" data-bs-toggle="modal" href="#modal${buttonNumber}">400</button>
+                          id="${buttonNumber}" data-bs-toggle="modal" href="#modal${buttonNumber}">800</button>
                     </div>
                 </div>
                 <div class="modal fade" id="modal${buttonNumber}" aria-hidden="true" aria-labelledby="..." tabindex="-1">
@@ -189,7 +189,7 @@ export default class MainSection extends UI {
                     <div class="card-body text-center">
                         <button class="btn btn-${buttonArray[i]} w-100 h-100"
                          data-question-value="${GameArray[i].question5}"
-                          id="${buttonNumber}" data-bs-toggle="modal" href="#modal${buttonNumber}">500</button>
+                          id="${buttonNumber}" data-bs-toggle="modal" href="#modal${buttonNumber}">1000</button>
                     </div>
                 </div>
                 <div class="modal fade" id="modal${buttonNumber}" aria-hidden="true" aria-labelledby="..." tabindex="-1">
