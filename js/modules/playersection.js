@@ -97,6 +97,24 @@ export default class PlayerSection extends UI {
             }
         });
 
+        super.container.addEventListener("keyup", function(e){
+            if(e.target.id == "name0"){
+               sessionStorage.setItem("p1name", e.target.value)
+            }
+            if(e.target.id == "name1"){
+                sessionStorage.setItem("p2name", e.target.value)                
+            }
+            if(e.target.id == "name2"){
+                sessionStorage.setItem("p3name", e.target.value)
+            }
+            if(e.target.id == "name3"){
+                sessionStorage.setItem("p4name", e.target.value)
+            }
+            if(e.target.id == "name4"){
+                sessionStorage.setItem("p5name", e.target.value)                
+            }
+        });
+
     
     }
 
@@ -110,7 +128,7 @@ export default class PlayerSection extends UI {
             output += `
             <div class="card bg-${buttonArray[i]} text-center">
                 <div class="card-body">
-                    <input type="text" class="form-control-text" id="Namn" placeholder="Namn">
+                    <input type="text" class="form-control-text" id="${'name'+i}" placeholder="Namn">
                     <hr>
                     <p class="fs-2" id="${i}-points"></p>
                     <button type="button" class="p${i+1}-btn-neg btn btn-outline-danger btn-sm">-</button>

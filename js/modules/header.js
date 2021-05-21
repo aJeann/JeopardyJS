@@ -53,7 +53,7 @@ export default class Header extends UI {
                     data-bs-toggle="modal"
                     data-bs-target="#choose-game-modal"
                   >
-                    Ändra plan
+                    Välj spel
                 </button>
               </li>
               <li class="nav-item mr-4">

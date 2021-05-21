@@ -3,7 +3,7 @@ import Footer from "./footer.js";
 import PlayerSection from "./playersection.js";
 
 window.addEventListener("load", async (e) => {
-    new MainSection(".main-section").showCategories(25);
+    new MainSection(".main-section").showCategories();
     new PlayerSection(".player-section");
     new Footer("footer");
 });

@@ -10,7 +10,12 @@ export default class MainSection extends UI {
             let p2points = Number(localStorage.getItem("2-points"));
             let p3points = Number(localStorage.getItem("3-points"));
             let p4points = Number(localStorage.getItem("4-points"));
-        
+            let p1name = sessionStorage.getItem("p1name");
+            let p2name = sessionStorage.getItem("p2name");
+            let p3name = sessionStorage.getItem("p3name");
+            let p4name = sessionStorage.getItem("p4name");
+            let p5name = sessionStorage.getItem("p5name");
+
             if (e.target.id == "show-q"){
                 let inputValue = Number(document.querySelector(".form-control").value);
                 sessionStorage.setItem("valueOf", inputValue);
@@ -92,7 +97,19 @@ export default class MainSection extends UI {
             if(e.target.className == "show-a btn btn-light"){
                 this.showFinalA();
             }
-            
+            if(e.target.className == "update-btn btn btn-outline-danger"){
+                console.log(p1name)
+                document.getElementById("p0-points").innerHTML = p0points
+                document.getElementById("p1-points").innerHTML = p1points
+                document.getElementById("p2-points").innerHTML = p2points
+                document.getElementById("p3-points").innerHTML = p3points
+                document.getElementById("p4-points").innerHTML = p4points
+                document.getElementById("p0-name").innerHTML = p1name
+                document.getElementById("p1-name").innerHTML = p2name
+                document.getElementById("p2-name").innerHTML = p3name
+                document.getElementById("p3-name").innerHTML = p4name
+                document.getElementById("p4-name").innerHTML = p5name
+            }
         });
         
         super.container.addEventListener("click", async (e) => {
@@ -106,9 +123,32 @@ export default class MainSection extends UI {
     async showCategories(category){
         let CategoriesArray = await super.loadData("GET", "https://jeopardy-oscar.herokuapp.com/allCats");
         CategoriesArray = JSON.parse(CategoriesArray);
-        
 
-        let buttonArray = ['primary', 'danger', 'success', 'info', 'secondary'];
+        if(category == null){
+            let output = `
+            <h1>Välkommen till Oscars Jeopardy!</h1>
+            <div class="modal fade" id="choose-game-modal" aria-hidden="true" aria-labelledby="..." tabindex="-1">
+                    <div class="modal-dialog modal-xl modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="card h-100 rounded">
+                                <div class="card-body text-center">
+                                    <div class="btn-group">
+                                        <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Välj omgång
+                                        </button>
+                                        <div class="dropdown-menu" id="cat-choice">
+                                        </div>
+                                    </div>                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        `;
+        super.container.innerHTML = output;
+        }
+        else{
+            let buttonArray = ['primary', 'danger', 'success', 'info', 'secondary'];
         let buttonNumber = 0;
 
         let GameArray = [];
@@ -312,6 +352,11 @@ export default class MainSection extends UI {
 
         super.container.innerHTML = output;
 
+        }
+        
+
+        
+
         this.printFinalJeopardy();
         this.fillOutChoices();
     }
@@ -330,6 +375,8 @@ export default class MainSection extends UI {
                                 <div class="card h-100 rounded">
                                     <div class="card-body text-center">
                                     <h1>Final Jeopardy!</h1>
+                                    <button class="update-btn btn btn-outline-danger">Uppdatera poäng</button>
+                                    <hr>
                                     <div class="row">`
                                 
                                     for(let i = 0; i<amountOfPlayers; i++){
@@ -337,7 +384,7 @@ export default class MainSection extends UI {
                                         <div class="col-4">
                                         <div class="card bg-${buttonArray[i]} text-center" id="finalcard">
                                             <div class="card-body">
-                                            <h5 class="card-title"></h5>
+                                            <h5 class="card-title" id="p${i}-name"></h5>
                                                 <hr>
                                                 <p class="fs-2" id="p${i}-points">${document.getElementById(i+"-points").textContent}</p>
                                                 <div class="row">
