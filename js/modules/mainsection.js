@@ -3,7 +3,13 @@ import UI from "../ui.js";
 export default class MainSection extends UI {
     constructor(appendTo) {
         super(appendTo);
+
         super.container.addEventListener("click", async (e) => {
+            let p0points = Number(localStorage.getItem("0-points"));
+            let p1points = Number(localStorage.getItem("1-points"));
+            let p2points = Number(localStorage.getItem("2-points"));
+            let p3points = Number(localStorage.getItem("3-points"));
+            let p4points = Number(localStorage.getItem("4-points"));
         
             if (e.target.id == "show-q"){
                 let inputValue = Number(document.querySelector(".form-control").value);
@@ -21,6 +27,70 @@ export default class MainSection extends UI {
                 localStorage.setItem("category", path)
                 console.log(path)
                 await this.showCategories(path);
+            }
+            //MODAL CARDS
+            if(e.target.className == "p1-btn-nega btn btn-outline-danger"){
+               
+                let bet = Number(document.getElementById("p0bet").value);
+                let tempV = Number(p0points-bet)
+                document.getElementById("p0-points").innerHTML = tempV;
+            }
+            if(e.target.className == "p2-btn-nega btn btn-outline-danger"){
+                
+                let bet = Number(document.getElementById("p1bet").value);
+                let tempV =Number(p1points-bet)
+                document.getElementById("p1-points").innerHTML = tempV;        
+            }
+            if(e.target.className == "p3-btn-nega btn btn-outline-danger"){
+                
+                let bet = Number(document.getElementById("p2bet").value);
+                let tempV = Number(p2points-bet)
+                document.getElementById("p2-points").innerHTML = tempV;        
+            }
+            if(e.target.className == "p4-btn-nega btn btn-outline-danger"){
+                
+                let bet = Number(document.getElementById("p3bet").value);
+                let tempV = Number(p3points-bet)
+                document.getElementById("p3-points").innerHTML = tempV;        
+            }
+            if(e.target.className == "p5-btn-nega btn btn-outline-danger"){
+                
+                let bet = Number(document.getElementById("p4bet").value);
+                let tempV = Number(p4points-bet)
+                document.getElementById("p4-points").innerHTML = tempV;        
+            }
+            if(e.target.className == "p1-btn-poss btn btn-outline-success"){
+                
+                let bet = Number(document.getElementById("p0bet").value);
+                let tempV =Number(p0points+bet)
+                document.getElementById("p0-points").innerHTML = tempV
+            }
+            if(e.target.className == "p2-btn-poss btn btn-outline-success"){
+                
+                let bet = Number(document.getElementById("p1bet").value);
+                let tempV =Number(p1points+bet)
+                document.getElementById("p1-points").innerHTML = tempV
+            }
+            if(e.target.className == "p3-btn-poss btn btn-outline-success"){
+                
+                let bet = Number(document.getElementById("p2bet").value);
+                let tempV = Number(p2points+bet)
+                document.getElementById("p2-points").innerHTML = tempV;
+            }
+            if(e.target.className == "p4-btn-poss btn btn-outline-success"){
+                
+                let bet = Number(document.getElementById("p3bet").value);
+                let tempV = Number(p3points+bet)
+                document.getElementById("p3-points").innerHTML = tempV;
+            }
+            if(e.target.className == "p5-btn-poss btn btn-outline-success"){
+                
+                let bet = Number(document.getElementById("p4bet").value);
+                let tempV = Number(p4points+bet)
+                document.getElementById("p4-points").innerHTML = tempV;
+            }
+            if(e.target.className == "show-a btn btn-light"){
+                this.showFinalA();
             }
             
         });
@@ -242,7 +312,81 @@ export default class MainSection extends UI {
 
         super.container.innerHTML = output;
 
+        this.printFinalJeopardy();
         this.fillOutChoices();
+    }
+    
+    printFinalJeopardy(){
+        let amountOfPlayers = Number(localStorage.getItem("amountOfPlayers"));
+        let finalQ = sessionStorage.getItem("finalQ");
+        let category = sessionStorage.getItem("finalC");
+        let answer = sessionStorage.getItem("finalA");
+        let buttonArray = ['primary', 'danger', 'success', 'info', 'warning'];
+        let output = ``;
+        output += ` 
+                    <div class="modal fade" id="final-jeopardy-modal" aria-hidden="true" aria-labelledby="..." tabindex="-1">
+                        <div class="modal-dialog modal-lg modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="card h-100 rounded">
+                                    <div class="card-body text-center">
+                                    <h1>Final Jeopardy!</h1>
+                                    <div class="row">`
+                                
+                                    for(let i = 0; i<amountOfPlayers; i++){
+                                        output += `
+                                        <div class="col-4">
+                                        <div class="card bg-${buttonArray[i]} text-center" id="finalcard">
+                                            <div class="card-body">
+                                            <h5 class="card-title"></h5>
+                                                <hr>
+                                                <p class="fs-2" id="p${i}-points">${document.getElementById(i+"-points").textContent}</p>
+                                                <div class="row">
+                                                <div class="col-3"><button type="button" class="p${i+1}-btn-nega btn btn-outline-danger">-</button></div>                                            
+                                                <div class="col-6"><input type="number" class="form-control" id="p${i}bet" placeholder="0"></div>
+                                                <div class="col-3"><button type="button" class="p${i+1}-btn-poss btn btn-outline-success">+</button></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        </div>`
+                                    }
+                                    output +=`
+                                    </div>
+
+                                    <h2>${category}</h2>
+                                    <button class="btn btn-light"
+                                        id="show-q"
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#final-q-modal">
+                                        Visa fråga
+                                    </button>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="final-q-modal" aria-hidden="true" aria-labelledby="..." tabindex="-1">
+                        <div class="modal-dialog modal-xl modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="card h-100 rounded">
+                                    <div class="card-body text-center">
+                                    <hr>
+                                    <br>
+                                    <p class="fs-1">${finalQ}</p>            
+                                    <br>            
+                                    <hr>
+                                    <div id="answerfinal" style="display:none"><h2>${answer}</h2></div>
+                                    <button class="show-a btn btn-light" id="show-final-a">Visa svar</button>
+                                    </div>
+                                    <embed src="jeptheme.mp3" loop="true" autostart="true">
+                                </div>
+                            </div>
+                        </div>
+                    </div>`
+
+                super.container.innerHTML += output;
+
+                
 
     }
 
@@ -252,6 +396,7 @@ export default class MainSection extends UI {
         let CategoriesArray = await super.loadData("GET", "https://jeopardy-oscar.herokuapp.com/all");
         CategoriesArray = JSON.parse(CategoriesArray);
         console.log(CategoriesArray);
+        console.log("test");
 
         for(let i = 0; i < CategoriesArray.length; i++){
             output += `<a type="button" class="dropdown-item" href="#" data-category-id="${CategoriesArray[i].id}">${CategoriesArray[i].name}</a>`
@@ -320,6 +465,15 @@ export default class MainSection extends UI {
         } else {
           x.style.display = "none";
         }
+    }
+
+    showFinalA(){
+        var x = document.getElementById("answerfinal");
+            if (x.style.display === "none") {
+              x.style.display = "block";
+            } else {
+              x.style.display = "none";
+            }
     }
 
 }
