@@ -81,7 +81,7 @@ export default class MainSection extends UI {
                         <div class="modal-content">
                             <div class="card h-100 rounded"> 
                                 <div class="card-header text-center">
-                                <h3>100</h3>
+                                <h3>200</h3>
                                 </div>
                                 <div class="card-body text-center">
                                 <br>
@@ -109,7 +109,7 @@ export default class MainSection extends UI {
                         <div class="modal-content">
                             <div class="card h-100 rounded">
                             <div class="card-header text-center">
-                                <h3>200</h3>
+                                <h3>400</h3>
                                 </div>
                                 <div class="card-body text-center">
                                 <br>
@@ -139,7 +139,7 @@ export default class MainSection extends UI {
                         <div class="modal-content">
                             <div class="card h-100 rounded">
                             <div class="card-header text-center">
-                                <h3>300</h3>
+                                <h3>600</h3>
                                 </div>
                                 <div class="card-body text-center">
                                 <br>
@@ -168,7 +168,7 @@ export default class MainSection extends UI {
                         <div class="modal-content">
                             <div class="card h-100 rounded">
                                 <div class="card-header text-center">
-                                <h3>400</h3>
+                                <h3>800</h3>
                                 </div>
                                 <div class="card-body text-center">
                                 <br>
@@ -197,7 +197,7 @@ export default class MainSection extends UI {
                         <div class="modal-content">
                             <div class="card h-100 rounded">
                                 <div class="card-header text-center">
-                                <h3>500</h3>
+                                <h3>1000</h3>
                                 </div>
                                 <div class="card-body text-center">
                                 <br>
